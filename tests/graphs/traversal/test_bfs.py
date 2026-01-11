@@ -3,7 +3,6 @@ from src.graphs.traversal.bfs import bfs_connected
 def test_bfs_run():
     print("\n--- Testing BFS ---")
     
-    # גרף לדוגמה
     graph = {
         'A': ['B', 'C'],
         'B': ['A', 'D', 'E'],
