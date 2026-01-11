@@ -1,6 +1,6 @@
 def merge_sort(arr):
     # Merge Sort Logic
-    # Complexity: O(n log n) - Very fast for large datasets!
+    # Complexity: O(n log n) - Very fast for large datasets
     
     # Base case: A list of 0 or 1 elements is already sorted
     if len(arr) > 1:
