@@ -13,8 +13,9 @@ try:
         arr = [random.randint(1, 100) for _ in range(arr_length)]
         print(f"Before sorting: {arr}")
         
-        # Run the algorithm
-        merge_sort(arr)
+        # p = 0
+        # r = len(arr) - 1
+        merge_sort(arr, 0, len(arr) - 1)
         
         print(f"After sorting:  {arr}")
         

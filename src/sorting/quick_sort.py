@@ -1,34 +1,30 @@
-def quick_sort(arr, low=0, high=None):
-    # Quick Sort Logic
-    # Complexity: O(n log n) average case. 
-    # (Worst case is O(n^2), but that's very rare with good pivot choice).
-    
-    if high is None:
-        high = len(arr) - 1
+def partition(A, low, high):
+    # Choose the last element as pivot
+    pivot = A[high]
+    i = low - 1  # place for the smaller element i=-1
 
-    if low < high:
-        # 1. Partition the array and get the pivot index
-        pivot_index = partition(arr, low, high)
-
-        # 2. Recursively sort elements before and after partition
-        quick_sort(arr, low, pivot_index - 1)
-        quick_sort(arr, pivot_index + 1, high)
-
-def partition(arr, low, high):
-    # This function takes the last element as pivot, places
-    # the pivot element at its correct position in sorted
-    # array, and places all smaller (smaller than pivot)
-    # to left of pivot and all greater elements to right
-    
-    pivot = arr[high] # Choosing the last element as pivot
-    i = low - 1       # Index of smaller element
-
+    # Rearrange elements around the pivot
     for j in range(low, high):
-        # If current element is smaller than or equal to pivot
-        if arr[j] <= pivot:
+        if A[j] < pivot:
             i += 1
-            arr[i], arr[j] = arr[j], arr[i] # Swap
+            A[i], A[j] = A[j], A[i]  # swap smaller element to the left side
 
-    # Place the pivot in the correct position
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    return i + 1
+    # Place pivot in its correct position
+    A[i + 1], A[high] = A[high], A[i + 1]
+    return i + 1  # return the pivot index
+
+
+def quick_sort(A, low, high):
+    if low < high:
+        # Partition the array
+        pi = partition(A, low, high)
+
+        # Recursively sort elements before and after the pivot
+        quick_sort(A, low, pi - 1)   # left side
+        quick_sort(A, pi + 1, high)  # right side
+
+
+# Example usage
+A = [7, 2, 1, 6, 8, 5, 3, 4] # [1, 2, 3 |, 4, | 8, 5, 7, 6] => [2,1,3,4,7,6,8]
+quick_sort(A, 0, len(A) - 1)
+print("Sorted array:", A)

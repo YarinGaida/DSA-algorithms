@@ -13,9 +13,7 @@ try:
         arr = [random.randint(1, 100) for _ in range(arr_length)]
         print(f"Before sorting: {arr}")
         
-        # Run the algorithm
-        # Note: Quick Sort works in-place (changes the original list)
-        quick_sort(arr)
+        quick_sort(arr, 0, len(arr) - 1)
         
         print(f"After sorting:  {arr}")
         
