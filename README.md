@@ -19,7 +19,6 @@ Building the foundations.
 - [x] [Linked Lists](src/data_structures/linked_list.py)
 - [x] [Stack](src/data_structures/stack.py) & [Queue](src/data_structures/queue.py)
 - [x] [Binary Heaps](src/data_structures/heap.py)
-- [x] [Heap](src/data_structures/heap_sort.py)
 - [ ] Binary Search Trees (BST)
 
 ### 3. Graphs & Traversal
