@@ -12,7 +12,6 @@ Classic sorting algorithms implemented to visualize $O(n^2)$ vs $O(n \log n)$.
 - [x] [Insertion Sort](src/sorting/insertion_sort.py)
 - [x] [Merge Sort](src/sorting/merge_sort.py)
 - [x] [Quick Sort](src/sorting/quick_sort.py)
-- [x] [Heap Sort](src/sorting/heap_sort.py) (Assuming this exists inside sorting based on context)
 - [ ] Bucket Sort
 
 ### 2. Data Structures
@@ -20,6 +19,7 @@ Building the foundations.
 - [x] [Linked Lists](src/data_structures/linked_list.py)
 - [x] [Stack](src/data_structures/stack.py) & [Queue](src/data_structures/queue.py)
 - [x] [Binary Heaps](src/data_structures/heap.py)
+- [x] [Heap](src/data_structures/heap_sort.py)
 - [ ] Binary Search Trees (BST)
 
 ### 3. Graphs & Traversal
@@ -37,5 +37,5 @@ Solvers for weighted graph problems.
 ### 5. Network Flow & MST
 Advanced graph theory implementations.
 - [x] [Prim's Algorithm](src/graphs/mst/prim.py)
-- [x] [Ford-Fulkerson](src/graphs/flow/ford_fulkerson.py)
-- [x] [Edmonds-Karp](src/graphs/flow/edmonds_karp.py)
+- [ ] [Ford-Fulkerson](src/graphs/flow/ford_fulkerson.py)
+- [ ] [Edmonds-Karp](src/graphs/flow/edmonds_karp.py)
