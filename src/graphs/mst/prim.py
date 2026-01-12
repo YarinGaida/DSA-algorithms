@@ -14,14 +14,11 @@ def prim_formal(graph, s):
     """
     
     # --- Initialization ---
-    # ∀v ∈ V 𝜆(v) = ∞
     lambda_val = {v: float('inf') for v in graph}
     
-    # 𝜆(s) = 0 ; 𝜀(s) = ∅
     lambda_val[s] = 0
     epsilon = {v: None for v in graph}
     
-    # T = ∅ ; Q = V
     T = []
     Q = set(graph.keys())
 
